@@ -1,0 +1,23 @@
+<html>
+<body>
+
+  Name  <input type="text" id="name1">
+  <br>
+  Score   <input type="text" id="myText">
+  <br>
+  <p id="result"> </p>
+  <br>
+  <button type="button" onclick="fun1()">go</button>
+  <script>
+    function fun1(){
+    var f= document.getElementById('myText').value;
+    var x= document.getElementById('name1').value;
+    if (f>50)
+    document.getElementById('result').innerHTML=(x +" you have passed");
+  else
+  document.getElementById('result').innerHTML=(x +" you have failed");
+    }
+  </script>
+<script> document.write("jj")</script>
+</body>
+</html>

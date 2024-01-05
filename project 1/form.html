@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <h1 style="text-align: center;">Rental Contact</h1>
+    <h2 id="demo" style="text-align: right;"></h2>
+    <script>
+        const d = new Date();
+        document.getElementById("demo").innerHTML=d; 
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+    <br>
+    <br>
+    Name : <input type="text" id="name1"> <span id="name2" style="color: red;"></span>
+    <br>
+    <br>
+    Nationality : <input type="text" id="nationality1"> <span id="nationality2" style="color: red;"></span>
+    <br>
+    <br>
+    Age : <input type="text" id="age1"> <span  id="age2" style="color: red;"></span>
+    <br>
+    <br>
+    <form id="information"> 
+        id.information : <input type="radio" name="id.information" value="1"> ID </input>
+        <input type="radio" name="id.information" value="2"> Passport </input>
+        <span id="information2" style="color: red;"></span>
+    </form>
+    <br>
+    No of Id : <input type="text" id="noid1"> <span  id="noid2" style="color: red;"></span>
+    <br>
+    <br>
+    Phone No : <input type="text" id="no1"> <span id="no2" style="color: red;"></span>
+    <br>
+    <br>
+    Days : <input type="text" id="day1"> <span id="day2" style="color: red;"></span>
+    <br>
+    <br>
+    Rate : 
+    <select id="rate1" > 
+        <option value="1">Select please </option>
+        <option value="20">Samll car 20$ </option>
+        <option value="35">Medium car 35$ </option>
+        <option value="50">Large car 50$ </option>
+        
+    </select>
+    <span id="rate2" style="color: red;"></span>
+    <br>
+    <br>
+    <form id="gold">
+        Golden Customer : <input type="radio" name="golden" value="10"> Yes </input>
+        <input type="radio" name="golden" value="0"> No </input> <span id="gold2" style="color: red;"></span>
+    </form>
+    <br>
+    <form id="pay">
+        Payment Method : <input type="radio" name="payment" value="Cach"> Cach </input>
+        <input type="radio" name="payment" value="Visa"> Visa </input> <span id="pay2" style="color: red;"></span>
+    </form> 
+    <br>
+    <h3>By selecting Report, you accept all terms and vouch for the accuracy of all of your data.</h3>
+    <button type="button" onclick="fun1()">report</button>
+    </div>
+    </div>
+    </div>
+    <script>
+        function fun1(){
+            // name 
+            var n=document.getElementById("name1").value;
+            if(n=="")
+            document.getElementById("name2").innerHTML=("     invalid please enter name")
+        else{
+        document.getElementById("name3").innerHTML=("Name = "+ n);}
+
+    // nationality
+        var na=document.getElementById("nationality1").value;
+        if (!isNaN(na)) 
+        document.getElementById("nationality2").innerHTML=("Invalid input. Please enter a non-numeric value.");
+    
+    else 
+        document.getElementById("nationality3").innerHTML=("Nationality = "+ na);
+        
+
+        //age
+        var a=document.getElementById("age1").value;
+        if (isNaN(a)) {
+        document.getElementById("age2").innerHTML=("Invalid input, Please enter a Numeric value.");
+    } 
+    else if(a<21)
+        document.getElementById("age2").innerHTML=("invalid input, The Age Under 21");
+else
+    document.getElementById("age3").innerHTML=("Age = "+ a)
+        
+        //id.information
+        var i=document.getElementsByName("id.information");
+       
+            if (i[0].checked)
+          document.getElementById("information3").innerHTML=("id.information = id")
+         else if(i[1].checked)
+        document.getElementById("information3").innerHTML=("id.information = passport")
+        else {
+            document.getElementById("information2").innerHTML=("invaled input, you must select one ");}
+
+        // no of id 
+        var ni=document.getElementById("noid1").value;
+        if(ni=="")
+            document.getElementById("noid2").innerHTML=("     invalid please enter no of id")
+            else{
+        document.getElementById("noid3").innerHTML=("No of Id = "+ ni);}
+    
+        // Phone No
+        var ph = document.getElementById("no1").value;
+var pho = ph.length;
+
+if (pho != 10 || isNaN(ph)) {
+    document.getElementById("no2").innerHTML = "Invalid input, Please enter a Numeric value with exactly 10 characters.";
+}
+else
+document.getElementById("no3").innerHTML=("Phone no = "+ ph);
+
+        //days 
+        var d = document.getElementById("day1").value;
+        if (d=="" || isNaN(d)) {
+    document.getElementById("day2").innerHTML = "Invalid input, Please enter a Numeric value ";
+}
+else
+document.getElementById("day3").innerHTML=("Days = "+ d);
+
+        //rate
+        var r=document.getElementById("rate1").value;
+        if (r==1)
+        document.getElementById("rate2").innerHTML = "Invalid input, Please enter a Numeric value ";
+    else if(r==20)
+        document.getElementById("rate3").innerHTML=("Rate Type =  Small Car");
+        else if(r==35)
+        document.getElementById("rate3").innerHTML=("Rate Type =  Medium Car");
+        else if(r==50)
+        document.getElementById("rate3").innerHTML=("Rate Type =  Large Car");
+
+        //golden
+        var g=document.getElementsByName("golden");
+        var go=1;
+      if (g[0].checked)
+      go=.9;
+    else if(i[1].checked)
+    go=1;
+        else {
+            document.getElementById("gold2").innerHTML=("invaled input, you must select one ");}
+      // cost
+      if(go ==1 || go ==.9){
+      document.getElementById("cost3").innerHTML=( "cost = "+ (d*r) * go +"$");}
+      // payment
+      var p=document.getElementsByName("pay");
+       
+       if (i[0].checked)
+     document.getElementById("pay3").innerHTML=("Payment = Cash")
+    else if(i[1].checked)
+   document.getElementById("pay3").innerHTML=("Payment = Visa")
+   else {
+       document.getElementById("pay2").innerHTML=("invaled input, you must select one ");}
+    }
+    </script>
+    <br>
+    <br>
+    <div style="border-style: solid; width: 500px; height: 400px; margin-left: 500px; margin-bottom: 100px;">
+    <h3 id="name3" style="font-size: 20px;"></h3>
+    <h3 id="age3" style="font-size: 20px;"></h3>
+    <h3 id="nationality3" style="font-size: 20px;"></h3>
+    <h3 id="information3" style="font-size: 20px;"></h3>
+    <h3 id="noid3" style="font-size: 20px;"></h3>
+    <h3 id="no3" style="font-size: 20px;"></h3>
+    <h3 id="day3" style="font-size: 20px;"></h3>
+    <h3 id="rate3" style="font-size: 20px;"></h3>
+    <h3 id="cost3" style="font-size: 20px;"></h3>
+    <h3 id="pay3" style="font-size: 20px;"></h3>
+</div>
+</body>
+</html>

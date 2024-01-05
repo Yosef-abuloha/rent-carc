@@ -1,0 +1,159 @@
+nav{
+    flex:1;
+    text-align: right ;
+    margin-right: 50px;
+
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 10px;
+    
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 22px;
+    margin-top: 50px;
+}
+.header{
+    color: white;
+    font-size: 60px;
+    margin-top: 45px;
+    margin-left: 50px;
+}
+.description{
+    color: darkcyan;
+    font-size: medium;
+    margin-left: 40px;
+}
+.flex-box{
+display: flex;
+width: 1000px;
+margin-top: 30px;
+margin-left: 190px;
+}
+.left{
+    width:40%;
+}
+.img{
+    width: 400px;
+}
+.img img{
+    width: inherit;
+}
+.b-name{ 
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+.price{
+    font-size: 20px;
+    font-weight: 500;
+  color: white;
+  text-align: center;
+}
+.car-color{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.car-color p{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+.c-color{
+    width: 60px;
+    height: 30px;
+    border: 1px solid #66fcf1;
+    color: black;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: white;
+}
+.right{
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+.car-model{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.c-model{
+    width: 60px;
+    height: 30px;
+    border: 1px solid #66fcf1;
+    color:black;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: white;
+}
+.car-model p{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+.form-container{
+    display: flex;
+
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    padding: 20px;
+margin-left: 580px;
+margin-bottom: 60px
+}
+.input-box{
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.input-box span{
+    font-weight: 500;
+    color: white;
+}
+.input-box input{
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: #eeeff1;
+ 
+    font-size: 1rem;
+}
+.btn-box{
+    display: flex;
+    margin: 20px 0;
+    margin-left: 1260px;
+}
+.btn-box button{
+    font-size: 18px;
+    padding: 18px 25px;
+    border: null;
+    outline: null;
+    border-radius: 6px;
+    cursor: pointer;
+    color: black;
+}
+.rent-box{
+    background-color:white; 
+}
+.rent-box:hover{
+    background-color: white
+}
+label{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+option{
+    text-align: center;
+}
+
